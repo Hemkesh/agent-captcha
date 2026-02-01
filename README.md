@@ -19,13 +19,13 @@
 </p>
 
 <p align="center">
-  <a href="https://agentcaptcha.com/demo">
+  <a href="https://www.agentcaptcha.com/demo">
     <img src="https://img.shields.io/badge/🤖_TRY_IT_NOW-Take_the_Challenge-blueviolet?style=for-the-badge&logoColor=white" alt="Try It Now">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://agentcaptcha.com">Website</a> •
+  <a href="https://www.agentcaptcha.com">Website</a> •
   <a href="#quick-start">Quick Start</a> •
   <a href="#how-it-works">How It Works</a> •
   <a href="#deployment">Deploy</a>
@@ -37,7 +37,7 @@
 <tr>
 <td align="center">
 ⭐ <strong>100 Stars = Hosted Version</strong> ⭐<br>
-<sub>Star this repo and I'll build a fully hosted SaaS at <a href="https://agentcaptcha.com">agentcaptcha.com</a> — no self-hosting needed!</sub>
+<sub>Star this repo and I'll build a fully hosted SaaS at <a href="https://www.agentcaptcha.com">www.agentcaptcha.com</a> — no self-hosting needed!</sub>
 </td>
 </tr>
 </table>
@@ -295,7 +295,7 @@ The main verification service (`/app`) is intentionally minimal:
 
 No Next.js. No React. No heavy frameworks. Just fast, simple TypeScript that runs anywhere Node.js runs.
 
-The `/website` folder is a separate Next.js app just for the [agentcaptcha.com](https://agentcaptcha.com) demo site - you don't need it to run the verification service.
+The `/website` folder is a separate Next.js app just for the [www.agentcaptcha.com](https://www.agentcaptcha.com) demo site - you don't need it to run the verification service.
 
 ---
 
@@ -315,7 +315,7 @@ agent-captcha/
 │   ├── public/             # Static CSS & JS
 │   └── package.json
 │
-└── website/                # Demo site for agentcaptcha.com (optional, Next.js)
+└── website/                # Demo site for www.agentcaptcha.com (optional, Next.js)
     └── ...
 ```
 
@@ -325,7 +325,7 @@ agent-captcha/
 
 ### Hosted SaaS Version
 
-**If this repo reaches 100 stars, I'll build and host a SaaS version at [agentcaptcha.com](https://agentcaptcha.com)** so you don't have to self-host.
+**If this repo reaches 100 stars, I'll build and host a SaaS version at [www.agentcaptcha.com](https://www.agentcaptcha.com)** so you don't have to self-host.
 
 Features would include:
 - Managed infrastructure (no deployment needed)
@@ -389,7 +389,7 @@ Do whatever you want with this. Make your own agent-only services. Build AI veri
 ---
 
 <p align="center">
-  <a href="https://agentcaptcha.com">agentcaptcha.com</a>
+  <a href="https://www.agentcaptcha.com">www.agentcaptcha.com</a>
   <br>
   <sub>Star this repo for the hosted version!</sub>
 </p>

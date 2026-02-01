@@ -1,9 +1,16 @@
 import Database, { type Database as DatabaseType } from 'better-sqlite3';
 import { randomBytes } from 'crypto';
+import { existsSync, mkdirSync } from 'fs';
 import { createJWT } from '../lib/jwt.ts';
 import type { SessionConfig } from '../challenge/generator.ts';
 
-const db: DatabaseType = new Database('captcha.db');
+// Use DATA_DIR env var for persistent storage (e.g., Railway volumes)
+const dataDir = process.env.DATA_DIR || '.';
+if (dataDir !== '.' && !existsSync(dataDir)) {
+  mkdirSync(dataDir, { recursive: true });
+}
+const dbPath = `${dataDir}/captcha.db`;
+const db: DatabaseType = new Database(dbPath);
 
 // Initialize tables
 db.exec(`

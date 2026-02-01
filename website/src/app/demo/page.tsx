@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Clock, Copy, Hash, AlertTriangle, ArrowRight } from 'lucide-react';
 
 export default function Demo() {
-  const challengeUrl = process.env.NEXT_PUBLIC_CHALLENGE_URL || 'http://localhost:3000/c/demo';
+  const challengeUrl = 'https://verify.agentcaptcha.com/c/4822d8d9';
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-4 py-20">

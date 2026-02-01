@@ -2,7 +2,7 @@ import { Hono } from 'hono';
 import { Layout } from '../components/Layout.ts';
 import { DashboardPage } from '../components/Dashboard.ts';
 import { WelcomePage } from '../components/Welcome.ts';
-import { getSites, createSite, deleteSite, isSetupComplete, markSetupComplete } from '../db/sqlite.ts';
+import { getSites, createSite, deleteSite, updateSiteCallback, isSetupComplete, markSetupComplete } from '../db/sqlite.ts';
 
 const dashboard = new Hono();
 
@@ -64,6 +64,26 @@ dashboard.post('/sites', async (c) => {
 dashboard.post('/sites/:id/delete', (c) => {
   const id = c.req.param('id');
   deleteSite(id);
+  return c.redirect('/dashboard');
+});
+
+// Update site callback URL
+dashboard.post('/sites/:id/update', async (c) => {
+  const id = c.req.param('id');
+  const body = await c.req.parseBody();
+  const callbackUrl = body.callback_url as string;
+
+  if (!callbackUrl) {
+    return c.text('Missing callback URL', 400);
+  }
+
+  try {
+    new URL(callbackUrl); // Validate URL
+  } catch {
+    return c.text('Invalid callback URL', 400);
+  }
+
+  updateSiteCallback(id, callbackUrl);
   return c.redirect('/dashboard');
 });
 

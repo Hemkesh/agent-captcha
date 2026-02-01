@@ -6,6 +6,11 @@ const copyIcon = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" st
   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
 </svg>`;
 
+const editIcon = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+</svg>`;
+
 export function DashboardPage(sites: Site[], baseUrl: string) {
   const showLogout = isAuthEnabled();
 
@@ -28,10 +33,16 @@ export function DashboardPage(sites: Site[], baseUrl: string) {
 
       <div class="site-field">
         <label>Callback URL</label>
-        <div class="site-field-value">
+        <div class="site-field-value" id="callback-display-${site.id}">
           <code>${escapeHtml(site.callback_url)}</code>
           <button type="button" class="btn-copy" data-copy="${escapeHtml(site.callback_url)}" title="Copy">${copyIcon}</button>
+          <button type="button" class="btn-edit" onclick="showEditForm('${site.id}')" title="Edit">${editIcon}</button>
         </div>
+        <form method="POST" action="/dashboard/sites/${site.id}/update" id="callback-edit-${site.id}" class="edit-form" style="display: none;">
+          <input type="url" name="callback_url" value="${escapeHtml(site.callback_url)}" required>
+          <button type="submit" class="btn btn-primary btn-sm">Save</button>
+          <button type="button" class="btn btn-sm" onclick="hideEditForm('${site.id}')">Cancel</button>
+        </form>
       </div>
 
       <div class="site-field">
@@ -126,6 +137,16 @@ if (result) {
           }
         });
       });
+
+      function showEditForm(id) {
+        document.getElementById('callback-display-' + id).style.display = 'none';
+        document.getElementById('callback-edit-' + id).style.display = 'flex';
+      }
+
+      function hideEditForm(id) {
+        document.getElementById('callback-display-' + id).style.display = 'flex';
+        document.getElementById('callback-edit-' + id).style.display = 'none';
+      }
     </script>
   `;
 }

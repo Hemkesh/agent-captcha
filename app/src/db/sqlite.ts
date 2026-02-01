@@ -118,6 +118,11 @@ export function deleteSite(id: string): boolean {
   return result.changes > 0;
 }
 
+export function updateSiteCallback(id: string, callbackUrl: string): boolean {
+  const result = db.prepare('UPDATE sites SET callback_url = ? WHERE id = ?').run(callbackUrl, id);
+  return result.changes > 0;
+}
+
 // Session operations
 export function createSession(siteId: string, config: SessionConfig): Session {
   const session: Session = {

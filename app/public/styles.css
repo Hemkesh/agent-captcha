@@ -932,3 +932,41 @@ input[type="password"]:focus {
 .site-field-value .btn-copy {
   flex-shrink: 0;
 }
+
+.site-field-value .btn-edit {
+  flex-shrink: 0;
+}
+
+.btn-edit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+
+.btn-edit:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.edit-form {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.edit-form input {
+  flex: 1;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}

@@ -81,7 +81,7 @@ export function Hero() {
             </Link>
           </Button>
           <Button size="lg" variant="outline" asChild>
-            <a href="https://github.com/hemkeshg/agent-captcha" target="_blank" rel="noopener">
+            <a href="https://github.com/Hemkesh/agent-captcha" target="_blank" rel="noopener">
               <Github className="mr-2 h-4 w-4" />
               GitHub
             </a>

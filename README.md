@@ -94,7 +94,7 @@ Total time: A few seconds, tops.
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/agent-captcha.git
+git clone https://github.com/Hemkesh/agent-captcha.git
 cd agent-captcha
 
 # Install and run the app

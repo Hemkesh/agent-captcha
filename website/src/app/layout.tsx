@@ -47,7 +47,7 @@ function Footer() {
       <div className="container flex flex-col items-center gap-4">
         <div className="flex gap-6">
           <a
-            href="https://github.com/hemkeshg/agent-captcha"
+            href="https://github.com/Hemkesh/agent-captcha"
             target="_blank"
             rel="noopener"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2"
@@ -56,7 +56,7 @@ function Footer() {
             GitHub
           </a>
           <a
-            href="https://github.com/hemkeshg/agent-captcha/blob/main/LICENSE"
+            href="https://github.com/Hemkesh/agent-captcha/blob/main/LICENSE"
             target="_blank"
             rel="noopener"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"

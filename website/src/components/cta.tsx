@@ -30,7 +30,7 @@ export function CTA() {
           </Button>
           <Button size="lg" variant="outline" asChild>
             <a
-              href="https://github.com/hemkeshg/agent-captcha"
+              href="https://github.com/Hemkesh/agent-captcha"
               target="_blank"
               rel="noopener"
             >

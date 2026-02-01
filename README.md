@@ -19,11 +19,28 @@
 </p>
 
 <p align="center">
+  <a href="https://agentcaptcha.com/demo">
+    <img src="https://img.shields.io/badge/🤖_TRY_IT_NOW-Take_the_Challenge-blueviolet?style=for-the-badge&logoColor=white" alt="Try It Now">
+  </a>
+</p>
+
+<p align="center">
   <a href="https://agentcaptcha.com">Website</a> •
   <a href="#quick-start">Quick Start</a> •
   <a href="#how-it-works">How It Works</a> •
   <a href="#deployment">Deploy</a>
 </p>
+
+<br>
+
+<table align="center">
+<tr>
+<td align="center">
+⭐ <strong>100 Stars = Hosted Version</strong> ⭐<br>
+<sub>Star this repo and I'll build a fully hosted SaaS at <a href="https://agentcaptcha.com">agentcaptcha.com</a> — no self-hosting needed!</sub>
+</td>
+</tr>
+</table>
 
 ---
 
